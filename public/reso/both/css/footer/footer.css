@@ -1,0 +1,308 @@
+.footer-container {
+    min-height: 400px !important;
+    height: min-content !important;
+    font-family: 'Roboto', sans-serif !important;
+
+    padding-bottom: 0px;
+    
+    background-color: rgb(var(--color_1));
+}
+.wrapper-footer-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25vh auto 50px 40px;
+    grid-template-areas: 
+    'wrapper-footer-upper'
+    'wrapper-footer-lower'
+    '.'
+    'wrapper-footer-lowest'
+    ;
+}
+
+.wrapper-footer-upper {
+    grid-area: wrapper-footer-upper;
+    background-color: rgb(var(--color_white));
+}
+.wrapper-footer-lower {
+    grid-area: wrapper-footer-lower;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: minmax(150px, auto) 20px auto;
+    grid-template-areas: 
+    '. footer-lower-reseller .'
+    '. . .'
+    '. footer-lower-more .'
+    ;
+}
+.footer-lower-reseller {
+    grid-area: footer-lower-reseller;
+    position: relative;
+
+    margin-top: -10vh;
+    
+    width: 96%;
+    padding: 1% 2% 1% 2%;
+    height: min-content;
+
+    display: grid;
+    grid-template-columns: auto max-content;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'reseller-header reseller-join'
+    'reseller-text reseller-join'
+    ;
+
+    background: linear-gradient(33deg, rgba(55,68,92,1) 0%, rgba(87,215,119,1) 100%);
+    color: rgb(var(--color_white));
+    border-radius: 20px;
+}
+.reseller-header {
+    grid-area: reseller-header;
+}
+.reseller-header {
+    margin: 0px;
+}
+.reseller-text {
+    grid-area: reseller-text;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.reseller-text > div {
+    height: 100%;
+    width: fit-content;
+    max-height: 50px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.reseller-text > * {
+    flex: 0 1 auto;
+}
+.reseller-text p {
+    margin: 10px;
+}
+.reseller-text img {
+    height: 60%;
+    width: auto;
+}
+.reseller-join {
+    grid-area: reseller-join;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reseller-join button {
+    width: 95%;
+    height: 60px;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row;
+
+    border: none;
+
+    padding: 0px 20px 0px 20px;
+    color: rgb(var(--color_1));
+}
+.reseller-join button > p {
+    white-space: nowrap;
+    margin: 0px 5px 0px 5px;
+
+    font-weight: 600;
+}
+.reseller-join button > img {
+    width: auto;
+    max-width: 60px;
+    height: 50px;
+}
+.reseller-icon-right {
+    width: 30px !important;
+    height: auto !important;
+}
+.footer-lower-more {
+    grid-area: footer-lower-more;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-lower-more > div {
+    min-width: fit-content;
+    flex: 1 1 300px
+}
+.footer-more-link  {
+    width: auto;
+}
+.footer-more-link img {
+    transition: .5s ease !important;
+}
+.footer-more-link > span {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+.footer-more-link div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row;
+}
+.footer-more-link img {
+    height: 45px;
+    width: auto;
+}
+.footer-more-link a {
+    transition: .5s ease;
+}
+.footer-more-link a:nth-child(2) {
+    margin: 0px 10px 0px 10px;
+    padding: 5px;
+}
+.footer-more-link a:nth-child(2):hover {
+    background-color: rgba(var(--color_dark), .2);
+    border-radius: 100%;
+    scale: .9;
+}
+.footer-more-link a:nth-child(3) {
+    margin: 0px 10px 0px 10px;
+    padding: 5px;
+}
+.footer-more-link a:nth-child(3):hover {
+    background-color: rgba(var(--color_dark), .2);
+    border-radius: 100%;
+    scale: .9;
+}
+.footer-more-link a:nth-child(1) {
+    margin: 0px 10px 0px 0px;
+    padding: 5px;
+}
+.footer-more-link a:nth-child(1):hover {
+    background-color: rgba(var(--color_dark), .2);
+    border-radius: 100%;
+    scale: .9;
+}
+.footer-more-link a:nth-child(4) {
+    margin: 0px 0px 0px 10px;
+    padding: 5px;
+}
+.footer-more-link a:nth-child(4):hover {
+    background-color: rgba(var(--color_dark), .2);
+    border-radius: 100%;
+    scale: .9;
+}
+.footer-more-comment {
+    width: 100%;
+    color: white;
+}
+.footer-more-comment span {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-more-comment div {
+    width: 100%;
+    background-color: rgb(var(--color_white));
+
+    display: flex;
+    flex-flow: row;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+    
+}
+.footer-more-comment div > * {
+    padding: 0px;
+    margin: 0px;
+    padding: 5px;
+    font-size: 18px;
+
+    border: none;
+}
+.footer-more-comment div input {
+    width: 80%;
+} 
+.footer-more-comment div button {
+    width: 20%;
+    height: 100%;
+    
+    color: white;
+    background-color: rgb(var(--color_3));
+} 
+.wrapper-footer-lowest {
+    grid-area: wrapper-footer-lowest;
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    color: white;
+
+    background: linear-gradient(33deg, rgba(55,68,92,1) 0%, rgba(87,215,119,1) 100%);
+   
+}
+
+.wrapper-footer-lowest span {
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.wrapper-footer-lowest img {
+    height: 50%;
+}
+
+@media screen and (max-width:768px) {
+    .footer-lower-reseller {
+        padding: 10px 0px 10px 0px;
+        width: 100%;
+        margin-left: 0px;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto max-content;
+        grid-template-areas: 
+        'reseller-header'
+        'reseller-text'
+        'reseller-join'
+        ;
+        border-radius: 25px;
+    }
+    .reseller-join button {
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        width: fit-content;
+        min-width: auto;
+        height: 60px;
+        border-radius: 50px;
+    
+        padding: 0px 20px 0px 20px;
+    }
+    .reseller-header {
+        margin-left: 20px;
+        margin-right: 20px;
+ 
+    }
+    .reseller-text {
+        margin-left: 20px;
+        margin-left: 20px;
+    }
+    .wrapper-footer-lowest span {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width:491px) {
+    .wrapper-footer-lowest span {
+        font-size: 3vw;
+    }
+}

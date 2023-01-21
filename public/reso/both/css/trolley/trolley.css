@@ -1,0 +1,53 @@
+.trolley {
+    font-family: 'Lato', sans-serif;
+
+    margin-right: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+}
+.trolley img {
+    height: 40px;
+    width: auto;
+    filter: invert(14%) sepia(4%) saturate(1547%) hue-rotate(131deg) brightness(97%) contrast(84%);
+}
+.trolley-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row-reverse;
+}
+.trolley-notif {
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    background-color: rgb(var(--color_white));
+
+    position: absolute;
+    margin-right: -35px;
+    margin-top: -27px;
+    z-index: 1;
+    display: none;
+}
+.trolley-notif p {
+    font-size: 13px;
+    margin: -21px 0px 0px 0px;
+
+    font-weight: 600;
+    color: rgb(var(--color_dark));
+}
+
+.trolley-green {
+    filter: invert(74%) sepia(51%) saturate(546%) hue-rotate(45deg) brightness(92%) contrast(87%) !important;
+}
+.trolley-active {
+    display: block !important;
+}
+@media screen and (max-width:768px) {
+    .main-nav-wrapper {
+        max-width: 170px;
+    }
+    .trolley {
+        margin-right: 100px;
+    }
+}
